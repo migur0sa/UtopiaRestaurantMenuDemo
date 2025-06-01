@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luminous Bistro - Menu</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="image-overlay" onclick="closeImage()">
+      <button class="close-btn" onclick="closeImage()">×</button>
+      <img
+        class="modal-image"
+        onclick="event.stopPropagation()"
+        style="display: none"
+      />
+      <div
+        class="modal-emoji"
+        onclick="event.stopPropagation()"
+        style="display: none"
+      ></div>
+    </div>
+
+    <header class="header">
+      <div class="language-selector" onclick="toggleLanguageDropdown(event)">
+        <span class="language-flag" id="current-flag">🇺🇸</span>
+        <span id="current-language">EN</span>
+        <span class="dropdown-arrow">▼</span>
+        <div class="language-dropdown" id="language-dropdown">
+          <div
+            class="language-option selected"
+            onclick="selectLanguage(event, 'en')"
+          >
+            <span class="language-flag">🇺🇸</span>
+            <span>English</span>
+          </div>
+          <div class="language-option" onclick="selectLanguage(event, 'es')">
+            <span class="language-flag">🇪🇸</span>
+            <span>Español</span>
+          </div>
+        </div>
+      </div>
+      <img
+        class="restaurant-logo"
+        id="restaurant-logo"
+        src=""
+        alt=""
+        style="display: none"
+      />
+      <h1 class="restaurant-text-logo" id="restaurant-name">Luminous Bistro</h1>
+    </header>
+
+    <div class="container" id="menu-container">
+      <div class="loading">Loading menu...</div>
+    </div>
+
+    <footer class="footer" id="restaurant-footer">
+      <h3 id="footer-name">Luminous Bistro</h3>
+      <div id="footer-info"></div>
+      <div class="social-icons" id="social-icons"></div>
+    </footer>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
