@@ -7,7 +7,7 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
     sans-serif;
-  background: #f8f9fa;
+  background: lightgray;
   min-height: 100vh;
   color: #333;
 }
@@ -128,6 +128,29 @@ body {
   padding: 30px 20px;
 }
 
+.menu-subsection {
+  margin-bottom: 20px;
+  padding: 0 10px;
+}
+
+.subsection-name {
+  font-size: 1.3rem;
+  margin: 15px 0;
+  padding-bottom: 5px;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
+  color: var(--accent-color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.menu-subsection .menu-item {
+  margin-left: 10px;
+}
+
+.menu-subsection + .menu-subsection {
+  margin-top: 25px;
+}
+
 .menu-section {
   margin-bottom: 15px;
 }
@@ -149,7 +172,7 @@ body {
 }
 
 .section-button.special {
-  background: linear-gradient(135deg, rgb(209, 53, 14), #e74c3c);
+  background: #c90000; /* linear-gradient(135deg, rgb(209, 53, 14), #e74c3c); */
   color: white;
   box-shadow: 0 4px 15px rgba(199, 62, 29, 0.3);
 }
@@ -198,7 +221,7 @@ body {
 }
 
 .menu-content.expanded {
-  max-height: 800px;
+  max-height: fit-content;
   opacity: 1;
   padding: 25px;
 }
@@ -236,7 +259,7 @@ body {
 .item-price {
   font-size: 1.1rem;
   font-weight: 700;
-  color: #c73e1d;
+  color: #c90000;
 }
 
 .item-description {
@@ -253,7 +276,7 @@ body {
 }
 
 .tag {
-  background: linear-gradient(45deg, #c73e1d, #e74c3c);
+  background: #c90000; /* linear-gradient(45deg, #c73e1d, #e74c3c); */
   color: white;
   padding: 3px 10px;
   border-radius: 15px;
@@ -270,7 +293,7 @@ body {
 }
 
 .footer h3 {
-  color: #e74c3c;
+  color: #c90000;
   font-size: 1.5rem;
   margin-bottom: 15px;
   text-transform: uppercase;
@@ -292,7 +315,7 @@ body {
 .social-icon {
   width: 45px;
   height: 45px;
-  background: #000000;
+
   border-radius: 50%;
   display: flex;
   align-items: center;

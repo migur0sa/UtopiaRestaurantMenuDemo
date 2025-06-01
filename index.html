@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Luminous Bistro - Menu</title>
+    <title>TAO Downtown - Menu</title>
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
@@ -31,16 +31,16 @@
         <span id="current-language">ES</span>
         <span class="dropdown-arrow">▼</span>
         <div class="language-dropdown" id="language-dropdown">
-          <div class="language-option" onclick="selectLanguage(event, 'en')">
-            <span class="language-flag">🇺🇸</span>
-            <span>English</span>
-          </div>
           <div
             class="language-option selected"
             onclick="selectLanguage(event, 'es')"
           >
             <span class="language-flag">🇪🇸</span>
             <span>Español</span>
+          </div>
+          <div class="language-option" onclick="selectLanguage(event, 'en')">
+            <span class="language-flag">🇺🇸</span>
+            <span>English</span>
           </div>
         </div>
       </div>
@@ -49,9 +49,9 @@
         id="restaurant-logo"
         src=""
         alt=""
-        style="display: none"
+        style="display: inline-block"
       />
-      <h1 class="restaurant-text-logo" id="restaurant-name">Luminous Bistro</h1>
+      <!-- <h1 class="restaurant-text-logo" id="restaurant-name">Luminous Bistro</h1> -->
     </header>
 
     <div class="container" id="menu-container">

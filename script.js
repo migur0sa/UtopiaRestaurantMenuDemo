@@ -112,15 +112,15 @@ function closeLanguageDropdown() {
 function getSocialIcon(platform) {
   switch (platform) {
     case "instagram":
-      return '<i class="fab fa-instagram"></i>';
+      return '<span style="color: Tomato;"><i class="fab fa-instagram"></i></span>';
     case "whatsapp":
-      return '<i class="fab fa-whatsapp"></i>';
+      return '<span style="color: Tomato;"><i class="fab fa-whatsapp"></i></span>';
     case "facebook":
-      return '<i class="fab fa-facebook-f"></i>';
+      return '<span style="color: Tomato;"><i class="fab fa-facebook-f"></i></span>';
     case "twitter":
-      return '<i class="fab fa-twitter"></i>';
+      return '<span style="color: Tomato;"><i class="fab fa-twitter"></i></span>';
     default:
-      return '<i class="fas fa-link"></i>';
+      return '<span style="color: Tomato;"><i class="fas fa-link"></i></span>';
   }
 }
 
@@ -134,8 +134,6 @@ function renderMenu() {
   if (data.restaurant.logo) {
     restaurantLogoEl.src = `images/${data.restaurant.logo}`;
     restaurantLogoEl.alt = data.restaurant.name;
-    restaurantLogoEl.style.display = "block";
-    restaurantNameEl.style.display = "none";
   } else {
     restaurantNameEl.textContent = data.restaurant.name;
     restaurantNameEl.style.display = "block";
@@ -147,7 +145,7 @@ function renderMenu() {
   const footerInfo = document.getElementById("footer-info");
   footerInfo.innerHTML = `
                 <p>${data.restaurant.address}</p>
-                <p>Reservations: ${data.restaurant.phone}</p>
+                <p>${data.restaurant.phone}</p>
                 <p>${data.restaurant.hours}</p>
             `;
 
@@ -180,33 +178,81 @@ function renderMenu() {
                         ${section.name}
                     </button>
                     <div class="menu-content">
-                        ${section.items
-                          .map(
-                            (item) => `
-                            <div class="menu-item" onclick="showImage('${
-                              item.image
-                            }')">
-                                <div class="item-header">
-                                    <h3 class="item-name">${item.name}</h3>
-                                    <span class="item-price">${
-                                      item.price
-                                    }</span>
+                        ${
+                          section.items
+                            ? section.items
+                                .map(
+                                  (item) => `
+                                <div class="menu-item" onclick="showImage('${
+                                  item.image
+                                }')">
+                                    <div class="item-header">
+                                        <h3 class="item-name">${item.name}</h3>
+                                        <span class="item-price">${
+                                          item.price
+                                        }</span>
+                                    </div>
+                                    <p class="item-description">${
+                                      item.description
+                                    }</p>
+                                    <div class="item-tags">
+                                        ${item.tags
+                                          .map(
+                                            (tag) =>
+                                              `<span class="tag">${tag}</span>`
+                                          )
+                                          .join("")}
+                                    </div>
                                 </div>
-                                <p class="item-description">${
-                                  item.description
-                                }</p>
-                                <div class="item-tags">
-                                    ${item.tags
+                            `
+                                )
+                                .join("")
+                            : ""
+                        }
+                        ${
+                          section.subsections
+                            ? section.subsections
+                                .map(
+                                  (subsection) => `
+                                <div class="menu-subsection">
+                                    <h3 class="subsection-name">${
+                                      subsection.name
+                                    }</h3>
+                                    ${subsection.items
                                       .map(
-                                        (tag) =>
-                                          `<span class="tag">${tag}</span>`
+                                        (item) => `
+                                        <div class="menu-item" onclick="showImage('${
+                                          item.image
+                                        }')">
+                                            <div class="item-header">
+                                                <h4 class="item-name">${
+                                                  item.name
+                                                }</h4>
+                                                <span class="item-price">${
+                                                  item.price
+                                                }</span>
+                                            </div>
+                                            <p class="item-description">${
+                                              item.description
+                                            }</p>
+                                            <div class="item-tags">
+                                                ${item.tags
+                                                  .map(
+                                                    (tag) =>
+                                                      `<span class="tag">${tag}</span>`
+                                                  )
+                                                  .join("")}
+                                            </div>
+                                        </div>
+                                    `
                                       )
                                       .join("")}
                                 </div>
-                            </div>
-                        `
-                          )
-                          .join("")}
+                            `
+                                )
+                                .join("")
+                            : ""
+                        }
                     </div>
                 </section>
             `

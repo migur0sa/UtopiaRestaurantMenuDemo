@@ -4,8 +4,8 @@ export const menuData = {
     name: "Español",
     flag: "🇪🇸",
     restaurant: {
-      name: "Luminous Bistro",
-      logo: "", // Same logo for both languages
+      name: "TAO Downtown",
+      logo: "restaurant-logo.png", // Same logo for both languages
       address: "123 Calle Gourmet, Distrito Culinario",
       phone: "(555) 123-DINE",
       hours: "Abierto Martes - Domingo, 5:00 PM - 11:00 PM",
@@ -70,22 +70,48 @@ export const menuData = {
       {
         name: "Platos Fuertes",
         type: "regular",
-        items: [
+        subsections: [
           {
-            name: "Ribeye Wagyu",
-            price: "$65",
-            description:
-              "Ribeye wagyu de 12oz alimentado con pasto, con médula ósea asada, verduras de temporada y jus de vino tinto",
-            tags: ["Premium", "Firma"],
-            image: "wagyu.jpg",
+            name: "Carnes",
+            items: [
+              {
+                name: "Ribeye Wagyu",
+                price: "$65",
+                description:
+                  "Ribeye wagyu de 12oz alimentado con pasto, con médula ósea asada, verduras de temporada y jus de vino tinto",
+                tags: ["Premium", "Firma"],
+                image: "wagyu.jpg",
+              },
+              {
+                name: "Pechuga de Pato",
+                price: "$42",
+                description:
+                  "Pechuga de pato crujiente con puré de calabaza, cerezas confitadas y salsa de oporto",
+                tags: ["Especialidad", "Sin Gluten"],
+                image: "duck.jpg",
+              },
+            ],
           },
           {
-            name: "Risotto de Langosta",
-            price: "$38",
-            description:
-              "Arroz arborio cremoso con cola de langosta fresca, azafrán, guisantes y ralladura de limón",
-            tags: ["Mariscos", "Popular"],
-            image: "Lobster-Risotto.jpg",
+            name: "Mariscos",
+            items: [
+              {
+                name: "Risotto de Langosta",
+                price: "$38",
+                description:
+                  "Arroz arborio cremoso con cola de langosta fresca, azafrán, guisantes y ralladura de limón",
+                tags: ["Mariscos", "Popular"],
+                image: "Lobster-Risotto.jpg",
+              },
+              {
+                name: "Lubina Chilena",
+                price: "$36",
+                description:
+                  "Lubina chilena a la plancha con puré de coliflor, alcaparras crujientes y emulsión de limón",
+                tags: ["Sostenible", "Sin Gluten"],
+                image: "seabass.jpg",
+              },
+            ],
           },
         ],
       },
@@ -109,8 +135,8 @@ export const menuData = {
     name: "English",
     flag: "🇺🇸",
     restaurant: {
-      name: "Luminous Bistro",
-      logo: "", // Put your logo filename here like "images/logo.png"
+      name: "TAO Downtown",
+      logo: "restaurant-logo.png", // Put your logo filename here like "images/logo.png"
       address: "123 Gourmet Street, Culinary District",
       phone: "(555) 123-DINE",
       hours: "Open Tuesday - Sunday, 5:00 PM - 11:00 PM",
@@ -175,22 +201,48 @@ export const menuData = {
       {
         name: "Main Courses",
         type: "regular",
-        items: [
+        subsections: [
           {
-            name: "Wagyu Ribeye",
-            price: "$65",
-            description:
-              "12oz grass-fed wagyu ribeye with roasted bone marrow, seasonal vegetables, and red wine jus",
-            tags: ["Premium", "Signature"],
-            image: "wagyu.jpg",
+            name: "Meat",
+            items: [
+              {
+                name: "Wagyu Ribeye",
+                price: "$65",
+                description:
+                  "12oz grass-fed wagyu ribeye with roasted bone marrow, seasonal vegetables, and red wine jus",
+                tags: ["Premium", "Signature"],
+                image: "wagyu.jpg",
+              },
+              {
+                name: "Duck Breast",
+                price: "$42",
+                description:
+                  "Crispy skin duck breast with butternut squash purée, candied cherries, and port reduction",
+                tags: ["Specialty", "Gluten-Free"],
+                image: "duck.jpg",
+              },
+            ],
           },
           {
-            name: "Lobster Risotto",
-            price: "$38",
-            description:
-              "Creamy arborio rice with fresh lobster tail, saffron, peas, and lemon zest",
-            tags: ["Seafood", "Popular"],
-            image: "lobster-risotto.jpg",
+            name: "Seafood",
+            items: [
+              {
+                name: "Lobster Risotto",
+                price: "$38",
+                description:
+                  "Creamy arborio rice with fresh lobster tail, saffron, peas, and lemon zest",
+                tags: ["Seafood", "Popular"],
+                image: "lobster-risotto.jpg",
+              },
+              {
+                name: "Chilean Sea Bass",
+                price: "$36",
+                description:
+                  "Pan-seared Chilean sea bass with cauliflower purée, crispy capers, and lemon emulsion",
+                tags: ["Sustainable", "Gluten-Free"],
+                image: "seabass.jpg",
+              },
+            ],
           },
         ],
       },
