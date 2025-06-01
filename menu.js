@@ -168,7 +168,7 @@ export const menuData = {
             description:
               "Vieiras U10 selladas en sartén con puré de coliflor, crujientes de panceta y microgreens",
             tags: ["Sin Gluten", "Elección del Chef"],
-            image: "seared-scallops.jpg",
+            image: "Seared-Scallops.jpg",
           },
         ],
       },
@@ -190,7 +190,7 @@ export const menuData = {
             description:
               "Arroz arborio cremoso con cola de langosta fresca, azafrán, guisantes y ralladura de limón",
             tags: ["Mariscos", "Popular"],
-            image: "lobster-risotto.jpg",
+            image: "Lobster-Risotto.jpg",
           },
         ],
       },

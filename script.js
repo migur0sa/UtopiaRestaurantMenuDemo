@@ -1,7 +1,7 @@
 // script.js
 import { menuData } from "./menu.js";
 
-let currentLanguage = "en";
+let currentLanguage = "es";
 
 // FUNCTIONS
 function isImageFile(filename) {
